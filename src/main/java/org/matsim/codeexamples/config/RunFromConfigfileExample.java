@@ -52,14 +52,14 @@ public final class RunFromConfigfileExample {
 			prepareConfig() ;
 		}
 
-		Scenario scenario = ScenarioUtils.loadScenario(config );
+		Scenario scenario = ScenarioUtils.loadScenario( config );
 
-		Controler controler = new Controler(scenario);
+		Controler controler = new Controler( scenario );
 		controler.run();
 	}
 
-	public Config prepareConfig(){
-		String configFile ;
+	public Config prepareConfig(){	
+		String configFile;
 		if ( args!=null && args.length>=1 ) {
 			configFile = args[0] ;
 		} else {
